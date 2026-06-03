@@ -1472,7 +1472,7 @@ export async function processJsonDataAsync(
     
     // Build metadata
     const metadata: Metadata = {
-      market_name: 'Smartphone Gaming Market',
+      market_name: 'Advanced Wound Care Management Market',
       market_type: 'Market Analysis',
       industry: 'Gaming & Entertainment',
       years: allYears,

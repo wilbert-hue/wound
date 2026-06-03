@@ -54,7 +54,7 @@ export function FilterPresets() {
       {
         id: 'emerging-markets',
         name: 'Emerging Markets',
-        description: 'Top 5 states/UTs with highest CAGR',
+        description: 'Top 5 regions with highest CAGR',
         icon: <Target className="h-4 w-4" />,
         filters: emergingMarketsFilters
       },

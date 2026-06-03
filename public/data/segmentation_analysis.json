@@ -1,88 +1,74 @@
 {
   "India": {
-    "By Game Genre": {
-      "Action & Shooter Games": {},
-      "MOBA Games": {},
-      "Role-Playing Games": {},
-      "Strategy Games": {},
-      "Sports & Racing Games": {},
-      "Simulation Games": {},
-      "Puzzle & Logic Games": {},
-      "Casual & Arcade Games": {},
-      "Educational & Word Games": {},
-      "Others (Music Games and Card, Board & Casino-Style Games)": {}
+    "By Product Type": {
+      "Advanced Wound Dressings": {
+        "Standard Bordered Foam Dressings": {},
+        "Standard Non-bordered Foam Dressings": {},
+        "Alginate and Fiber Dressings": {},
+        "Hydrocolloid Dressings": {},
+        "Hydrogel Dressings": {},
+        "Collagen Dressings": {},
+        "Antimicrobial Dressings": {},
+        "Others (Film Dressings & Others)": {}
+      },
+      "Wound Therapy Devices": {
+        "Negative Pressure Wound Therapy Systems": {},
+        "Pressure Relief and Offloading Devices": {},
+        "Hyperbaric Oxygen Therapy Equipment": {},
+        "Others (Electrical Stimulation Wound Therapy Devices & Others)": {}
+      },
+      "Biologics and Regenerative Wound Care": {
+        "Acellular Skin Substitutes": {},
+        "Growth Factor-based Wound Products": {},
+        "Advanced Topical Wound Healing Agents": {},
+        "Others (Platelet-rich Plasma Products & Others)": {}
+      },
+      "Wound Closure and Adjunctive Products": {
+        "Adhesive Wound Closure Products": {},
+        "Sealants and Hemostatic Products": {},
+        "Fixation and Advanced Compression Products": {},
+        "Others (Scar Management Products & Others)": {}
+      },
+      "Wound Cleansing and Debridement Products": {
+        "Wound Cleansing Solutions": {},
+        "Wound Irrigation Products": {},
+        "Enzymatic Debridement Products": {},
+        "Others (Mechanical Debridement Products & Others)": {}
+      }
     },
-    "By Revenue Model": {
-      "In-App Purchases": {},
-      "In-Game Advertising": {},
-      "Paid Downloads": {},
-      "Subscription-Based Gaming": {}
+    "By Wound Type": {
+      "Chronic Wounds": {
+        "Diabetic Foot Ulcers": {},
+        "Pressure Ulcers": {},
+        "Venous Leg Ulcers": {},
+        "Arterial Ulcers": {},
+        "Others (Non-healing Chronic Wounds & Others)": {}
+      },
+      "Acute Wounds": {
+        "Surgical Wounds": {},
+        "Burns": {},
+        "Others (Traumatic Wounds & Others)": {}
+      }
     },
-    "By Operating System": {
-      "Android": {},
-      "iOS": {}
+    "By End User": {
+      "Hospitals": {},
+      "Clinics": {},
+      "Homecare Settings": {},
+      "Ambulatory Surgical Centers": {},
+      "Others (Academics and Research Institutes, Rehabilitation Centers & Others)": {}
     },
-    "By Age Group": {
-      "Below 18 Years": {},
-      "18–24 Years": {},
-      "25–34 Years": {},
-      "35–44 Years": {},
-      "Above 44 Years": {}
-    },
-    "By Gender": {
-      "Male": {},
-      "Female": {},
-      "Other": {}
+    "By Distribution Channel": {
+      "Hospital Pharmacies": {},
+      "Online Pharmacies": {},
+      "Retail Pharmacies": {}
     },
     "By Region": {
-      "North India": {
-        "Delhi": {},
-        "Haryana": {},
-        "Punjab": {},
-        "Himachal Pradesh": {},
-        "Uttarakhand": {},
-        "Jammu & Kashmir": {},
-        "Ladakh": {},
-        "Chandigarh": {}
-      },
-      "South India": {
-        "Andhra Pradesh": {},
-        "Telangana": {},
-        "Karnataka": {},
-        "Tamil Nadu": {},
-        "Kerala": {},
-        "Puducherry": {},
-        "Lakshadweep": {},
-        "Andaman & Nicobar Islands": {}
-      },
-      "West India": {
-        "Maharashtra": {},
-        "Gujarat": {},
-        "Rajasthan": {},
-        "Goa": {},
-        "Dadra & Nagar Haveli and Daman & Diu": {}
-      },
-      "East India": {
-        "West Bengal": {},
-        "Odisha": {},
-        "Bihar": {},
-        "Jharkhand": {}
-      },
-      "Central India": {
-        "Madhya Pradesh": {},
-        "Chhattisgarh": {},
-        "Uttar Pradesh": {}
-      },
-      "Northeast India": {
-        "Assam": {},
-        "Arunachal Pradesh": {},
-        "Manipur": {},
-        "Meghalaya": {},
-        "Mizoram": {},
-        "Nagaland": {},
-        "Sikkim": {},
-        "Tripura": {}
-      }
+      "North India": {},
+      "South India": {},
+      "East India": {},
+      "West India": {},
+      "Northeast India": {},
+      "Central India": {}
     }
   }
 }
