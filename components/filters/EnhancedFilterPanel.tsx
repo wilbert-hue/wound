@@ -248,48 +248,10 @@ export function EnhancedFilterPanel() {
   if (!data) return null
 
   // Get all segment types
-  // For volume mode, only show segment types that have actual volume records
-  const allSegmentTypes = Object.keys(data.dimensions.segments)
-  const segmentTypes = filters.dataType === 'volume'
-    ? (() => {
-        const volumeRecords = data.data.volume.geography_segment_matrix
-        const volumeSegTypes = new Set(volumeRecords.map(r => r.segment_type))
-        const filtered = allSegmentTypes.filter(type => volumeSegTypes.has(type))
-        return filtered.length > 0 ? filtered : allSegmentTypes
-      })()
-    : allSegmentTypes
+  const segmentTypes = Object.keys(data.dimensions.segments)
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-2.5 space-y-2">
-      {/* Data Type Selection */}
-      <div>
-        <label className="text-xs font-medium text-black uppercase">
-          Data Type
-        </label>
-        <div className="flex gap-1 mt-1">
-          <button
-            onClick={() => updateFilters({ dataType: 'value' })}
-            className={`flex-1 px-3 py-1.5 text-sm rounded ${
-              filters.dataType === 'value'
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 text-black hover:bg-gray-200'
-            }`}
-          >
-            Value
-          </button>
-          <button
-            onClick={() => updateFilters({ dataType: 'volume' })}
-            className={`flex-1 px-3 py-1.5 text-sm rounded ${
-              filters.dataType === 'volume'
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 text-black hover:bg-gray-200'
-            }`}
-          >
-            Volume
-          </button>
-        </div>
-      </div>
-
       {/* View Mode */}
       <div>
         <label className="text-xs font-medium text-black uppercase">
