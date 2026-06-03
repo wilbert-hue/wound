@@ -1,62 +1,87 @@
 {
-  "Global": {
-    "By Type": {
-      "Sub-Normothermic Perfusion (20–34°C)": {},
-      "Warm or Normothermic Perfusion (35–37°C)": {}
+  "India": {
+    "By Game Genre": {
+      "Action & Shooter Games": {},
+      "MOBA Games": {},
+      "Role-Playing Games": {},
+      "Strategy Games": {},
+      "Sports & Racing Games": {},
+      "Simulation Games": {},
+      "Puzzle & Logic Games": {},
+      "Casual & Arcade Games": {},
+      "Educational & Word Games": {},
+      "Others (Music Games and Card, Board & Casino-Style Games)": {}
     },
-    "By Organ Type": {
-      "Liver": {},
-      "Heart": {},
-      "Lung": {},
-      "Kidney": {},
-      "Others (Pancreas, Small bowel / Intestine, Composite Tissues / Limb Perfusion (emerging use cases))": {}
+    "By Revenue Model": {
+      "In-App Purchases": {},
+      "In-Game Advertising": {},
+      "Paid Downloads": {},
+      "Subscription-Based Gaming": {}
     },
-    "Application / Use Case": {
-      "Organ Preservation": {},
-      "Viability Assessment": {},
-      "Physiologic Transport": {},
-      "Reconditioning Marginal Organs": {},
-      "Others (Research Use / Protocol development)": {}
+    "By Operating System": {
+      "Android": {},
+      "iOS": {}
     },
-    "By End User": {
-      "Hospitals & Clinics": {},
-      "Specialty Clinic/Centers": {},
-      "Transplant Centers": {},
-      "Others (Research Institutes/Centers, Organ Procurement Organizations, etc.)": {}
+    "By Age Group": {
+      "Below 18 Years": {},
+      "18–24 Years": {},
+      "25–34 Years": {},
+      "35–44 Years": {},
+      "Above 44 Years": {}
+    },
+    "By Gender": {
+      "Male": {},
+      "Female": {},
+      "Other": {}
     },
     "By Region": {
-      "North America": {
-        "U.S.": {},
-        "Canada": {}
+      "North India": {
+        "Delhi": {},
+        "Haryana": {},
+        "Punjab": {},
+        "Himachal Pradesh": {},
+        "Uttarakhand": {},
+        "Jammu & Kashmir": {},
+        "Ladakh": {},
+        "Chandigarh": {}
       },
-      "Europe": {
-        "U.K.": {},
-        "Germany": {},
-        "Italy": {},
-        "France": {},
-        "Spain": {},
-        "Russia": {},
-        "Rest of Europe": {}
+      "South India": {
+        "Andhra Pradesh": {},
+        "Telangana": {},
+        "Karnataka": {},
+        "Tamil Nadu": {},
+        "Kerala": {},
+        "Puducherry": {},
+        "Lakshadweep": {},
+        "Andaman & Nicobar Islands": {}
       },
-      "Asia Pacific": {
-        "China": {},
-        "India": {},
-        "Japan": {},
-        "South Korea": {},
-        "ASEAN": {},
-        "Australia": {},
-        "Rest of Asia Pacific": {}
+      "West India": {
+        "Maharashtra": {},
+        "Gujarat": {},
+        "Rajasthan": {},
+        "Goa": {},
+        "Dadra & Nagar Haveli and Daman & Diu": {}
       },
-      "Latin America": {
-        "Brazil": {},
-        "Argentina": {},
-        "Mexico": {},
-        "Rest of Latin America": {}
+      "East India": {
+        "West Bengal": {},
+        "Odisha": {},
+        "Bihar": {},
+        "Jharkhand": {}
       },
-      "Middle East & Africa": {
-        "GCC": {},
-        "South Africa": {},
-        "Rest of Middle East & Africa": {}
+      "Central India": {
+        "Madhya Pradesh": {},
+        "Chhattisgarh": {},
+        "Uttar Pradesh": {}
+      },
+      "Northeast India": {
+        "Assam": {},
+        "Arunachal Pradesh": {},
+        "Manipur": {},
+        "Meghalaya": {},
+        "Mizoram": {},
+        "Nagaland": {},
+        "Sikkim": {},
+        "Tripura": {}
       }
     }
   }
