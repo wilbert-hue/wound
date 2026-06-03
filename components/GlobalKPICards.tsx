@@ -146,11 +146,12 @@ export function GlobalKPICards() {
     const actualSelectedGeographies = filters.geographies.length > 0 ? filters.geographies : []
     const dataTypeLabel = filters.dataType === 'value' ? 'Market Size' : 'Market Volume'
 
-    // Get market name from metadata, fallback to "Global Market"
-    const marketName = data.metadata.market_name || 'Global Market'
+    // Get market name from metadata, fallback to "Market"
+    const marketName = data.metadata.market_name || 'Market'
+    const defaultGeography = data.dimensions.geographies.global?.[0] || 'India'
 
     const geographyLabel = actualSelectedGeographies.length === 0
-      ? `Global ${marketName}`
+      ? `${defaultGeography} ${marketName}`
       : actualSelectedGeographies.length === 1
       ? `${actualSelectedGeographies[0]} ${marketName}`
       : `${actualSelectedGeographies.length} Geographies ${marketName}`
