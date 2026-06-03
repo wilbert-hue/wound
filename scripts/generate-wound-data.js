@@ -6,6 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 const YEARS = Array.from({ length: 13 }, (_, i) => 2021 + i) // 2021-2033
+const USD_MN_TO_INR_CR = 8.3 // Convert USD Million to INR Crore (83 INR/USD ÷ 10)
 
 const HIERARCHICAL_SEGMENTS = {
   'By Product Type': {
@@ -112,12 +113,16 @@ function hashString(str) {
   return Math.abs(h)
 }
 
+function toInrCr(value) {
+  return Math.round(value * USD_MN_TO_INR_CR * 10) / 10
+}
+
 function generateYearSeries(base2021, growthRate, seed) {
   const rand = seededRandom(seed)
   const series = {}
   let value = base2021 * (0.92 + rand() * 0.16)
   for (const year of YEARS) {
-    series[String(year)] = Math.round(value * 10) / 10
+    series[String(year)] = toInrCr(value)
     value *= 1 + growthRate + (rand() - 0.5) * 0.015
   }
   return series

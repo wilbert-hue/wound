@@ -13,6 +13,36 @@ export function formatCurrency(value: number, currency: string = 'USD', unit: st
   return `${currency} ${value.toFixed(2)} ${unit}`
 }
 
+export function getMarketValueUnitLabel(currency: string, valueUnit: string): string {
+  if (currency === 'INR') {
+    return `INR ${valueUnit}`
+  }
+  return `${currency} ${valueUnit}`
+}
+
+export function getMarketValueAxisLabel(currency: string, valueUnit: string): string {
+  return `Market Value (${getMarketValueUnitLabel(currency, valueUnit)})`
+}
+
+export function formatMarketValue(
+  value: number,
+  currency: string = 'INR',
+  valueUnit: string = 'Cr.',
+  decimals: number = 2
+): string {
+  const locale = currency === 'INR' ? 'en-IN' : 'en-US'
+  const formatted = value.toLocaleString(locale, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  })
+
+  if (currency === 'INR') {
+    return `₹ ${formatted} ${valueUnit}`
+  }
+
+  return `$ ${formatted} ${valueUnit}`
+}
+
 // Get currency symbol based on currency preference
 export function getCurrencySymbol(currency: 'USD' | 'INR'): string {
   return currency === 'INR' ? '₹' : '$'

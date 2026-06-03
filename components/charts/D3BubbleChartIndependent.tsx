@@ -11,6 +11,7 @@ import { CascadeFilter } from '@/components/filters/CascadeFilter'
 import { BusinessTypeFilter } from '@/components/filters/BusinessTypeFilter'
 import { Layers, ChevronDown, X, Tag, Plus } from 'lucide-react'
 import type { DataRecord } from '@/lib/types'
+import { getMarketValueUnitLabel } from '@/lib/utils'
 
 // Wrapper components for opportunity matrix filters
 function OpportunityGeographyMultiSelect() {
@@ -1513,15 +1514,10 @@ export function D3BubbleChartIndependent({ title, height = 500 }: BubbleChartPro
     )
   }
 
-  const selectedCurrency = currency || data.metadata.currency || 'USD'
-  const isINR = selectedCurrency === 'INR'
-  const currencySymbol = isINR ? '₹' : '$'
-  const unitText = isINR ? '' : (data.metadata.value_unit || 'Million')
-  
+  const selectedCurrency = currency || data.metadata.currency || 'INR'
+  const valueUnit = data.metadata.value_unit || 'Cr.'
   const unit = filters.dataType === 'value'
-    ? isINR 
-      ? currencySymbol
-      : `${selectedCurrency} ${unitText}`
+    ? getMarketValueUnitLabel(selectedCurrency, valueUnit)
     : data.metadata.volume_unit
 
   return (

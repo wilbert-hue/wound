@@ -4,6 +4,7 @@
  */
 
 import { DataRecord, FilterState } from './types'
+import { formatMarketValue } from './utils'
 
 export interface Insight {
   id: string
@@ -90,7 +91,7 @@ function findTopPerformer(records: DataRecord[], filters: FilterState, currency:
   let valueDisplay = ''
   if (filters.dataType === 'value') {
     if (currency === 'INR') {
-      valueDisplay = `₹${topValue.toLocaleString('en-IN', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} Mn`
+      valueDisplay = formatMarketValue(topValue, currency, 'Cr.')
     } else {
       valueDisplay = `${topValue.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} USD Mn`
     }
