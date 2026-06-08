@@ -53,6 +53,7 @@ const HIERARCHICAL_SEGMENTS = {
       'Arterial Ulcers',
       'Others (Non-healing Chronic Wounds & Others)',
     ],
+    'Pressure Injuries': [],
     'Acute Wounds': [
       'Surgical Wounds',
       'Burns',
@@ -137,9 +138,17 @@ function sumYearSeries(seriesList) {
   return result
 }
 
-function buildHierarchicalSegmentType(parentMap, geoScale, geoName) {
+function buildHierarchicalSegmentType(parentMap, geoScale, geoName, typeName) {
   const result = {}
   for (const [parent, children] of Object.entries(parentMap)) {
+    if (children.length === 0) {
+      const seed = hashString(`${geoName}|${typeName}|${parent}`)
+      const base = 120 + (seed % 350) * geoScale
+      const growth = 0.06 + (seed % 60) / 1000
+      result[parent] = generateYearSeries(base, growth, seed)
+      continue
+    }
+
     const childSeries = {}
     const childDataList = []
     children.forEach((child, idx) => {
@@ -182,7 +191,7 @@ function buildByRegion(geoScale, geoName) {
 function buildGeoData(geoName, scale) {
   const geo = {}
   for (const [typeName, parentMap] of Object.entries(HIERARCHICAL_SEGMENTS)) {
-    geo[typeName] = buildHierarchicalSegmentType(parentMap, scale, geoName)
+    geo[typeName] = buildHierarchicalSegmentType(parentMap, scale, geoName, typeName)
   }
   for (const [typeName, items] of Object.entries(FLAT_SEGMENTS)) {
     geo[typeName] = buildFlatSegmentType(items, scale, geoName, typeName)
@@ -196,7 +205,8 @@ function buildSegmentationStructure() {
   for (const [typeName, parentMap] of Object.entries(HIERARCHICAL_SEGMENTS)) {
     india[typeName] = {}
     for (const [parent, children] of Object.entries(parentMap)) {
-      india[typeName][parent] = Object.fromEntries(children.map((c) => [c, {}]))
+      india[typeName][parent] =
+        children.length === 0 ? {} : Object.fromEntries(children.map((c) => [c, {}]))
     }
   }
   for (const [typeName, items] of Object.entries(FLAT_SEGMENTS)) {
